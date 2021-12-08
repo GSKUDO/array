@@ -28,7 +28,26 @@ function reorganizar(){
     document.getElementById("contrario").innerHTML = reorg;
 }
 
-function ordenar() {
+function ordenar(){
     armazenar();
-    
+    let aux;
+    for (let i = 0; i < numeros.length; i++) {
+        if (numeros[i+1] < numeros[i]){
+            aux = numeros[i];
+            numeros[i] = numeros[i+1];
+            numeros[i+1] = aux;
+                if (numeros[i] < numeros[i-1]){
+    	            aux = numeros[i-1];
+    	            numeros[i-1] = numeros[i];
+    	            numeros[i] = aux;
+                        if (numeros[i-1] < numeros[i-2]){
+                            aux = numeros[i-2];
+                            numeros[i-2] = numeros[i-1];
+                            numeros[i-1] = aux;
+                        }
+                }
+        }
+    }
+    console.log(numeros);
+    document.getElementById("crescente").innerHTML = numeros;
 }

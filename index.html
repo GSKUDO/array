@@ -5,19 +5,24 @@
         <link rel="stylesheet" href="styles.css">
         <title>Array</title>
     </head>
+
     <body>
-        <input id="primeiro" type="number">
-        <input id="segundo" type="number">
-        <input id="terceiro" type="number">
-        <input id="quarto" type="number">
-        <button onclick="armazenar()">Armazenar os números</button>
-        <textarea id="armario"></textarea>
+        <div>
+            <input id="primeiro" type="number">
+            <input id="segundo" type="number">
+            <input id="terceiro" type="number">
+            <input id="quarto" type="number">
+        </div>
+        <div>
+            <button onclick="armazenar()">Armazenar os números</button>
+            <textarea id="armario"></textarea>
+        </div>
         <div>
             <button onclick="reorganizar()">Reorganizar ao contrário</button>
             <textarea id="contrario"></textarea>
         </div>
         <div>
-             <button onclick="ordenar()">Ordenar em crescente</button>
+            <button onclick="ordenar()">Ordenar em crescente</button>
             <textarea id="crescente"></textarea>
         </div>
         <script src="array.js"></script>
